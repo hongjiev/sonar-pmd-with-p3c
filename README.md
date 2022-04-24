@@ -1,3 +1,36 @@
+## 在 sonar-pmd 项目上增加 p3c 规则
+
+你当然也可以直接 build 我这个工程，打出来的包直接用。
+
+但是我之后不会维护这个 repo，所以大家自己掌握制作方法，当前时间：2022-04-24，当前 sonar-pmd 版本 3.2.0-SNAPSHOT，支持 java 15，p3c 规则 56 条。
+
+请按照下面的步骤，边做边对比 p3c 的 repo: https://github.com/alibaba/p3c 阿里只提供了 p3c-pmd 的源码，没有提供 sonar 插件。
+
+1. 克隆 sonar-pmd 最新的版本，之后基于它进行修改。不过如果你的 sonarqube 不是最新版本的话，需要关注下兼容性问题，我用的 sonarqube 是 v9.4
+
+2. sonar-pmd-plugin/pom.xml 添加依赖
+
+   ```xml
+       <dependency>
+         <groupId>com.alibaba.p3c</groupId>
+         <artifactId>p3c-pmd</artifactId>
+         <version>2.1.1</version>
+       </dependency>
+   ```
+
+3. 修改 pmd.properties，增加 p3c 的 56 条规则：见 /resources/org/sonar/l10n/pmd/rules/pmd.properties。当然可能你现在看到的 p3c 有更多的规则也不不一定。
+
+4. 增加 rules-p3c.xml，见 /resources/org/sonar/plugins/pmd/rules-p3c.xml
+
+5. 增加规则描述 html 目录，见 /resources/org/sonar/l10n/pmd-p3c
+
+6. 修改 pmd-model.xml，见 /resources/com/sonar/sqale/pmd-model.xml，搜索一下 p3c 就明白了
+
+7. 修改 PmdRulesDefinition.java，见 66 行
+
+8. 没了，你可以 mvn clean package 了，然后把打出来的包放到 sonarqube 的 extensions/plugins 目录下
+
+---
 # SonarQube PMD Plugin [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.sonarsource.pmd/sonar-pmd-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.sonarsource.pmd/sonar-pmd-plugin) [![Build Status](https://api.travis-ci.org/jborgers/sonar-pmd.svg?branch=master)](https://travis-ci.org/jborgers/sonar-pmd) [![SonarStatus](https://sonarcloud.io/api/project_badges/measure?project=org.sonarsource.pmd%3Asonar-pmd&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.sonarsource.pmd%3Asonar-pmd) [![SonarStatus](https://sonarcloud.io/api/project_badges/measure?project=org.sonarsource.pmd%3Asonar-pmd&metric=coverage)](https://sonarcloud.io/dashboard?id=org.sonarsource.pmd%3Asonar-pmd)
 Sonar-PMD is a plugin that provides coding rules from [PMD](https://pmd.github.io/).
 
