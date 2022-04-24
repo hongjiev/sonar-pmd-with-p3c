@@ -16,6 +16,11 @@
          <artifactId>p3c-pmd</artifactId>
          <version>2.1.1</version>
        </dependency>
+       <dependency>
+         <groupId>com.google.code.gson</groupId>
+         <artifactId>gson</artifactId>
+         <version>2.9.0</version>
+       </dependency>
    ```
 
 3. 修改 pmd.properties，增加 p3c 的 56 条规则：见 /resources/org/sonar/l10n/pmd/rules/pmd.properties。当然可能你现在看到的 p3c 有更多的规则也不不一定。

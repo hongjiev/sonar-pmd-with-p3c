@@ -124,6 +124,11 @@
       <artifactId>p3c-pmd</artifactId>
       <version>2.1.1</version>
     </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.9.0</version>
+    </dependency>
 
   </dependencies>
 
