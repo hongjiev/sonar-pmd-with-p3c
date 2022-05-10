@@ -1,12 +1,12 @@
 ## 在 sonar-pmd 项目上增加 p3c 规则
 
-你当然也可以直接 build 我这个工程，打出来的包直接用。
+你当然也可以直接 build 我这个工程，打出来的包直接用。或者直接使用我 release 的 jar 包: https://github.com/hongjiev/sonar-pmd-with-p3c/releases
 
-但是我之后不会维护这个 repo，所以大家自己掌握制作方法，当前时间：2022-04-24，当前 sonar-pmd 版本 3.2.0-SNAPSHOT，支持 java 15，p3c 规则 56 条。
+但是我之后不会维护这个 repo，所以大家自己掌握制作方法，当前时间：2022-04-24，当前 sonar-pmd 版本 3.2.0-SNAPSHOT，支持 JAVA 15，包含 p3c 规则 56 条。
 
 请按照下面的步骤，边做边对比 p3c 的 repo: https://github.com/alibaba/p3c 阿里只提供了 p3c-pmd 的源码，没有提供 sonar 插件。
 
-1. 克隆 sonar-pmd 最新的版本，之后基于它进行修改。不过如果你的 sonarqube 不是最新版本的话，需要关注下兼容性问题，我用的 sonarqube 是 v9.4
+1. 克隆 sonar-pmd 最新的版本，之后基于它进行修改。不过如果你的 sonarqube 不是最新版本的话，需要关注下兼容性问题，我用的 sonarqube 是 v9.4，实测 v8.9.8 完全可以用。
 
 2. sonar-pmd-plugin/pom.xml 添加依赖
 
