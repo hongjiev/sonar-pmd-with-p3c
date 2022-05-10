@@ -29,6 +29,8 @@
 
 5. 增加规则描述 html 目录，见 /resources/org/sonar/l10n/pmd-p3c
 
+> 这个文件夹下面的文件，我做了很多的优化，因为原来的很多描述不是很好。大家随意，你想直接用原始版本的也ok。
+
 6. 修改 pmd-model.xml，见 /resources/com/sonar/sqale/pmd-model.xml，搜索一下 p3c 就明白了
 
 7. 修改 PmdRulesDefinition.java，见 66 行
