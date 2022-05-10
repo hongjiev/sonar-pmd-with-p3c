@@ -2,27 +2,31 @@ Javadoc should be used for classes, class variables and methods. The format shou
 <p>Examples:</p>
 <pre>
 /**
-*
-* XXX class function description.
-*
-*/
+ * XXX class function description.
+ * @author XX
+ * @date 2022/05/10
+ */
 public class XxClass implements Serializable {
+
    private static final long serialVersionUID = 113323427779853001L;
+
    /**
-   * id
-   */
+    * id
+    */
    private Long id;
+
    /**
-   * title
-   */
+    * title
+    */
    private String title;
+
    /**
-   * find by id
-   *
-   * @param ruleId rule id
-   * @param page start from 1
-   * @return Result<Xxxx>
-   */
+    * find by id
+    *
+    * @param ruleId rule id
+    * @param page start from 1
+    * @return Result<Xxxx>
+    */
    public Result<Xxxx> funcA(Long ruleId, Integer page) {
        return null;
    }

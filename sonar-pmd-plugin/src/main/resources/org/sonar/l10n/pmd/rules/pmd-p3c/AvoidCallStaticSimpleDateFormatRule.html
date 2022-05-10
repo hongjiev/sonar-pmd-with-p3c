@@ -1,24 +1,28 @@
-SimpleDataFormat is unsafe, do not define it as a static variable. If have to, lock or DateUtils class must be used. <br/>
-Note: In JDK8, Instant can be used to replace Date, Calendar is replaced by LocalDateTime, SimpleDateFormat is replaced by DateTimeFormatter.<br/>
-Examples:
+<p>SimpleDataFormat is unsafe, do not define it as a static variable. If have to, lock or DateUtils class must be used. </p>
+<p>Note: In JDK8, Instant can be used to replace Date, Calendar is replaced by LocalDateTime, SimpleDateFormat is replaced by DateTimeFormatter.</p>
+<p>Positive example 1：</p>
 <pre>
-    Positive example 1：
     private static final String FORMAT = "yyyy-MM-dd HH:mm:ss";
+
     public String getFormat(Date date){
         SimpleDateFormat dateFormat = new SimpleDateFormat(FORMAT);
         return sdf.format(date);
     }
-
-    Positive example 2：
+</pre>
+<p>Positive example 2:</p>
+<pre>
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    public void getFormat(){
-        synchronized (sdf){
-        sdf.format(new Date());
-        ….;
-    }
 
-    Positive example 3：
-    private static final ThreadLocal<DateFormat> DATE_FORMATTER = new ThreadLocal<DateFormat>() {
+    public void getFormat() {
+        synchronized (sdf) {
+            sdf.format(new Date());
+            ….;
+        }
+    }
+</pre>
+<p>Positive example 3:</p>
+<pre>
+    private static final ThreadLocal&lt;DateFormat&gt; DATE_FORMATTER = new ThreadLocal&lt;DateFormat&gt;() {
         @Override
         protected DateFormat initialValue() {
             return new SimpleDateFormat("yyyy-MM-dd");

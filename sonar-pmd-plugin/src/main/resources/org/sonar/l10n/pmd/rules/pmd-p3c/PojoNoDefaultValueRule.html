@@ -2,7 +2,10 @@ While defining POJO classes like DO, DTO, VO, etc., do not assign any default va
 <p>Examples:</p>
 <pre>
     public class DemoDO {
+
         String str;
-        Integer a;
+
+        // do not set default value here
+        Integer a = 100;
     }
 </pre>

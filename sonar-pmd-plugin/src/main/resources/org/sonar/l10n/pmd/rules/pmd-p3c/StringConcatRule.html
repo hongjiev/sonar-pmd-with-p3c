@@ -1,13 +1,13 @@
 Use the append method in StringBuilder inside a loop body when concatenating multiple strings.
-<p>Examples:</p>
+<p>Negative example:</p>
 <pre>
-    Negative example:
     String result;
     for (String string : tagNameList) {
         result = result + string;
     }
-
-    Positive example:
+</pre>
+<p>Positive example:</p>
+<pre>
     StringBuilder stringBuilder = new StringBuilder();
     for (String string : tagNameList) {
         stringBuilder.append(string);

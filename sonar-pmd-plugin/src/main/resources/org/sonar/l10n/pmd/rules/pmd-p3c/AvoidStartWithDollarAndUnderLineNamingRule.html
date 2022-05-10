@@ -1,4 +1,10 @@
-All names should not start or end with an underline or a dollar sign.
-Examples:
+<p>All names should not start or end with an underline or a dollar sign.</p>
+<p>Negative examples:</p>
 <pre>
+    public class AvoidStartWithDollarAndUnderLineNamingRuleTest {
+        private String $1;
+        private String _1;
+        public void $sayHello(){}
+        public void _sayHello(){}
+    }
 </pre>
