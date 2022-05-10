@@ -1,3 +1,13 @@
+这个 repo 主要用于在 sonarqube 中集成阿里巴巴 P3C 代码规范。
+
+首先大家要知道 PMD，它是类似 FindBugs、CheckStyle 等静态代码分析的工具。
+
+SonarQube 本身内置了很多代码检查规则(当前 2022/05 最新版本 v9.4 有 604 条 java 代码规范)，我们也可以安装插件扩展代码规范集，sonar-pmd 就是其中的一个插件，它是 PMD 规范的实现。
+
+[P3C](https://github.com/alibaba/p3c) 是阿里巴巴发布的代码规范，其实阿里也可以做一个 sonar 插件，比如叫 sonar-p3c，不过它没有。
+
+我们可以在 p3c 的 repo 下面找到 p3c-pmd，它是基于 pmd 开发的，所以我们只要把这个代码合到 sonar-pmd 里面就可以了。当然，这个过程其实没那么简单。 
+
 ## 在 sonar-pmd 项目上增加 p3c 规则
 
 你当然也可以直接 build 我这个工程，打出来的包直接用。或者直接使用我 release 的 jar 包: https://github.com/hongjiev/sonar-pmd-with-p3c/releases
