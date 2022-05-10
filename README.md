@@ -12,7 +12,7 @@ SonarQube 本身内置了很多代码检查规则(当前 2022/05 最新版本 v9
 
 你当然也可以直接 build 我这个工程，打出来的包直接用。或者直接使用我 release 的 jar 包: https://github.com/hongjiev/sonar-pmd-with-p3c/releases
 
-但是我之后不会维护这个 repo，所以大家自己掌握制作方法，当前时间：2022-04-24，当前 sonar-pmd 版本 3.2.0-SNAPSHOT，支持 JAVA 15，包含 p3c 规则 56 条。
+但是我之后不会维护这个 repo，所以大家自己掌握制作方法，当前时间：2022-04-24，当前 sonar-pmd 版本 3.3.2-SNAPSHOT，支持 JAVA 15，包含 p3c 规则 56 条。
 
 请按照下面的步骤，边做边对比 p3c 的 repo: https://github.com/alibaba/p3c 阿里只提供了 p3c-pmd 的源码，没有提供 sonar 插件。
 
