@@ -1,16 +1,16 @@
 Use the append method in StringBuilder inside a loop body when concatenating multiple strings.
 <p>Negative example:</p>
 <pre>
-    String result;
-    for (String string : tagNameList) {
-        result = result + string;
-    }
+String result;
+for (String string : tagNameList) {
+    result = result + string;
+}
 </pre>
 <p>Positive example:</p>
 <pre>
-    StringBuilder stringBuilder = new StringBuilder();
-    for (String string : tagNameList) {
-        stringBuilder.append(string);
-    }
-    String result = stringBuilder.toString();
+StringBuilder stringBuilder = new StringBuilder();
+for (String string : tagNameList) {
+    stringBuilder.append(string);
+}
+String result = stringBuilder.toString();
 </pre>

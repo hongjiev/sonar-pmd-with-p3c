@@ -1,20 +1,22 @@
 Do not remove or add elements to a collection in a foreach loop. Please use Iterator to remove an item. Iterator object should be synchronized when executing concurrent operations.
-<p>Examples:</p>
+<p>Negative example:</p>
 <pre>
-    Negative example:
-    List<String> originList = new ArrayList<String>();
+    List&lt;String&gt; originList = new ArrayList&lt;String&gt;();
     originList.add("22");
-    for (String item : originList) {
-      //warn
-      list.add("bb");
-    }
 
+    for (String item : originList) {
+        //warn
+        list.add("bb");
+    }
+</pre>
+<p>Positive example:</p>
+<pre>
     Positive example:
-    Iterator<Integer> it=b.iterator();
+    Iterator&lt;Integer&gt; it = b.iterator();
     while(it.hasNext()){
-    Integer temp =  it.next();
+        Integer temp = it.next();
         if (delCondition) {
-          it.remove();
+            it.remove();
         }
     }
 </pre>

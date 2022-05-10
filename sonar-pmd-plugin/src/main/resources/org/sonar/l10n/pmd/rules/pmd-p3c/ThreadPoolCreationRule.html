@@ -29,7 +29,4 @@ A thread pool should be created by ThreadPoolExecutor rather than Executors. The
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.DiscardPolicy());
         return executor;
     }
-
-    //in code
-    userThreadPool.execute(thread);
 </pre>
